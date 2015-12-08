@@ -1,15 +1,16 @@
 #include "AppDelegate.h"
-#include "AliBabaScene.h"
+#include "GameBoardTest.h"
+#include "util.h"
 
 USING_NS_CC;
 
-static cocos2d::Size ultra4kResolutionSize = cocos2d::Size(4096, 2160);
-static cocos2d::Size ipadHDResolutionSize = cocos2d::Size(2048, 1536);
-static cocos2d::Size nexus5ResolutionSize = cocos2d::Size(1920, 1080);
-static cocos2d::Size ipadResolutionSize = cocos2d::Size(1024, 768);
-static cocos2d::Size iphoneHD5ResolutionSize = cocos2d::Size(1136, 640);
-static cocos2d::Size iphoneHDResolutionSize = cocos2d::Size(960, 640);
-static cocos2d::Size iphoneResolutionSize = cocos2d::Size(480, 320);
+static cocos2d::Size ultra4kResolutionSize = cocos2d::Size(2160,4096);
+static cocos2d::Size ipadHDResolutionSize = cocos2d::Size(1536,2048);
+static cocos2d::Size nexus5ResolutionSize = cocos2d::Size(1080,1920);
+static cocos2d::Size ipadResolutionSize = cocos2d::Size(768,1024);
+static cocos2d::Size iphoneHD5ResolutionSize = cocos2d::Size(640,1136);
+static cocos2d::Size iphoneHDResolutionSize = cocos2d::Size(640,960);
+static cocos2d::Size iphoneResolutionSize = cocos2d::Size(320,480);
 
 AppDelegate::AppDelegate() {
 
@@ -62,6 +63,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     if(screenSize.width == ultra4kResolutionSize.width || screenSize.height == ultra4kResolutionSize.width
        ) {
+        CCLOG("ultra4kResolutionSize");
         resDirOrders.push_back("ultra4k");
         resDirOrders.push_back("ipadhd");
         resDirOrders.push_back("nexus5");
@@ -74,6 +76,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     if(screenSize.width == ipadHDResolutionSize.width || screenSize.height == ipadHDResolutionSize.width
        ) {
+        CCLOG("ipadHDResolutionSize");
         resDirOrders.push_back("ipadhd");
         resDirOrders.push_back("nexus5");
         resDirOrders.push_back("ipad");
@@ -85,6 +88,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     if(screenSize.height == nexus5ResolutionSize.height || screenSize.width == nexus5ResolutionSize.height
        ) {
+        CCLOG("nexus5ResolutionSize");
         resDirOrders.push_back("nexus5");
         resDirOrders.push_back("ipad");
         resDirOrders.push_back("iphonehd5");
@@ -95,23 +99,26 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     if(screenSize.width == ipadResolutionSize.width || screenSize.height == ipadResolutionSize.width
        ) {
+        CCLOG("ipadResolutionSize");
         resDirOrders.push_back("ipad");
         resDirOrders.push_back("iphonehd5");
         resDirOrders.push_back("iphonehd");
         resDirOrders.push_back("iphone");
-        glview->setDesignResolutionSize(ipadHDResolutionSize.width, ipadHDResolutionSize.height, ResolutionPolicy::NO_BORDER);
+        glview->setDesignResolutionSize(ipadResolutionSize.width, ipadResolutionSize.height, ResolutionPolicy::NO_BORDER);
     }
 
     if(screenSize.width == iphoneHD5ResolutionSize.width || screenSize.height == iphoneHD5ResolutionSize.width
        ) {
+        CCLOG("iphoneHD5ResolutionSize");
         resDirOrders.push_back("iphonehd5");
         resDirOrders.push_back("iphonehd");
         resDirOrders.push_back("iphone");
         glview->setDesignResolutionSize(iphoneHD5ResolutionSize.width, iphoneHD5ResolutionSize.height, ResolutionPolicy::NO_BORDER);
     }
-    
+
     if(screenSize.width == iphoneHDResolutionSize.width || screenSize.height == iphoneHDResolutionSize.width
        ) {
+        CCLOG("iphoneHDResolutionSize");
         resDirOrders.push_back("iphonehd");
         resDirOrders.push_back("iphone");
         glview->setDesignResolutionSize(iphoneHDResolutionSize.width, iphoneHDResolutionSize.height, ResolutionPolicy::NO_BORDER);
@@ -119,16 +126,17 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     if(screenSize.width == iphoneResolutionSize.width || screenSize.height == iphoneResolutionSize.width
        ) {
+        CCLOG("iphoneResolutionSize");
         resDirOrders.push_back("iphone");
         glview->setDesignResolutionSize(iphoneResolutionSize.width, iphoneResolutionSize.height, ResolutionPolicy::NO_BORDER);
     }
-        
+
     fileUtils->setSearchPaths(resDirOrders);
 
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = AliBabaScene::createScene();
+    auto scene = GameBoardTest::createScene();
 
     // run
     director->runWithScene(scene);

@@ -68,6 +68,12 @@
 		BA9028541C136468002EAB1C /* nexus5 in Resources */ = {isa = PBXBuildFile; fileRef = BA9028521C136468002EAB1C /* nexus5 */; };
 		BA9028571C13A90C002EAB1C /* DebugScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9028551C13A90C002EAB1C /* DebugScene.cpp */; };
 		BA9028581C13A90C002EAB1C /* DebugScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9028551C13A90C002EAB1C /* DebugScene.cpp */; };
+		BA9B85361C15B20E00EC8FA1 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9B85351C15B20E00EC8FA1 /* util.cpp */; };
+		BA9B85371C15B20E00EC8FA1 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9B85351C15B20E00EC8FA1 /* util.cpp */; };
+		BA9B853A1C1659F300EC8FA1 /* GameBoardTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9B85381C1659F300EC8FA1 /* GameBoardTest.cpp */; };
+		BA9B853B1C1659F300EC8FA1 /* GameBoardTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9B85381C1659F300EC8FA1 /* GameBoardTest.cpp */; };
+		BA9B853E1C165E8A00EC8FA1 /* GameGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9B853C1C165E8A00EC8FA1 /* GameGrid.cpp */; };
+		BA9B853F1C165E8A00EC8FA1 /* GameGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9B853C1C165E8A00EC8FA1 /* GameGrid.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -167,6 +173,12 @@
 		BA9028521C136468002EAB1C /* nexus5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nexus5; sourceTree = "<group>"; };
 		BA9028551C13A90C002EAB1C /* DebugScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugScene.cpp; sourceTree = "<group>"; };
 		BA9028561C13A90C002EAB1C /* DebugScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugScene.h; sourceTree = "<group>"; };
+		BA9B85351C15B20E00EC8FA1 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		BA9B85381C1659F300EC8FA1 /* GameBoardTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameBoardTest.cpp; sourceTree = "<group>"; };
+		BA9B85391C1659F300EC8FA1 /* GameBoardTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoardTest.h; sourceTree = "<group>"; };
+		BA9B853C1C165E8A00EC8FA1 /* GameGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameGrid.cpp; sourceTree = "<group>"; };
+		BA9B853D1C165E8A00EC8FA1 /* GameGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameGrid.h; sourceTree = "<group>"; };
+		BAC9B9711C15B163003CF9FE /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -313,12 +325,18 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BA9B853C1C165E8A00EC8FA1 /* GameGrid.cpp */,
+				BA9B853D1C165E8A00EC8FA1 /* GameGrid.h */,
+				BA9B85381C1659F300EC8FA1 /* GameBoardTest.cpp */,
+				BA9B85391C1659F300EC8FA1 /* GameBoardTest.h */,
+				BA9B85351C15B20E00EC8FA1 /* util.cpp */,
 				BA9028551C13A90C002EAB1C /* DebugScene.cpp */,
 				BA9028561C13A90C002EAB1C /* DebugScene.h */,
 				BA7628811C034A4500E5E868 /* AliBabaScene.h */,
 				BA76287E1C034A3E00E5E868 /* AliBabaScene.cpp */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
+				BAC9B9711C15B163003CF9FE /* util.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -518,9 +536,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9B853E1C165E8A00EC8FA1 /* GameGrid.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				BA9B85361C15B20E00EC8FA1 /* util.cpp in Sources */,
 				BA9028571C13A90C002EAB1C /* DebugScene.cpp in Sources */,
+				BA9B853A1C1659F300EC8FA1 /* GameBoardTest.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				BA76287F1C034A3E00E5E868 /* AliBabaScene.cpp in Sources */,
@@ -531,10 +552,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9B853B1C1659F300EC8FA1 /* GameBoardTest.cpp in Sources */,
 				BA9028581C13A90C002EAB1C /* DebugScene.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				BA9B85371C15B20E00EC8FA1 /* util.cpp in Sources */,
 				BA7628801C034A3E00E5E868 /* AliBabaScene.cpp in Sources */,
+				BA9B853F1C165E8A00EC8FA1 /* GameGrid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

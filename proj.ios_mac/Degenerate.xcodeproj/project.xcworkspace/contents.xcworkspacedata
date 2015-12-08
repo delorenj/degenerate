@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../Classes/AliBabaScene.cpp">
-   </FileRef>
-   <FileRef
-      location = "group:../../Classes/AliBabaScene.h">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

@@ -36,7 +36,7 @@ bool AliBabaScene::init() {
     fg = Sprite::create("fg.png");
     fg->setPosition(Point(visibleSize.width/2, fg->getBoundingBox().size.height/2));
     this->addChild(fg, 1);
-    
+        
     // Init keyboard listener stuff
     auto eventListener = EventListenerTouchOneByOne::create();
     eventListener->setSwallowTouches(true);
